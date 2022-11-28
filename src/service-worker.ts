@@ -78,6 +78,11 @@ self.addEventListener("message", (event) => {
   }
 });
 
+self.addEventListener("install", (event) => {
+  // forces a service worker to activate immediately
+  self.skipWaiting();
+});
+
 let refreshing = false;
 
 self.addEventListener("controllerchange", function () {
