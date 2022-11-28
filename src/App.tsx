@@ -1,9 +1,12 @@
 import "./App.css";
+import { MoaCalculator } from "./calculator/calculator";
 
 function App() {
   return (
     <div className="App">
-      <main>Hello world</main>
+      <main>
+        <MoaCalculator />
+      </main>
     </div>
   );
 }
