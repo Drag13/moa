@@ -80,7 +80,7 @@ self.addEventListener("message", (event) => {
 
 let refreshing = false;
 
-navigator.serviceWorker.addEventListener("controllerchange", function () {
+self.addEventListener("controllerchange", function () {
   if (refreshing) {
     return;
   }
