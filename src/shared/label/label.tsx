@@ -1,15 +1,17 @@
 import { ClassAttributes, LabelHTMLAttributes } from "react";
-import { join } from "../css";
-import styles from "./label.module.css";
 
 type AppLabelProps = { text: string } & JSX.IntrinsicAttributes &
   ClassAttributes<HTMLLabelElement> &
   LabelHTMLAttributes<HTMLLabelElement>;
 
 export const AppLabel = (props: AppLabelProps) => {
-  const className = join(styles.label, props.className);
   return (
-    <label {...props} className={className}>
+    <label
+      {...props}
+      className={`text-xl text-white absolute top-6 left-0 peer-focus:text-xs peer-focus:top-0 peer-valid:text-xs peer-valid:top-0 ${
+        props.className ?? ""
+      }`}
+    >
       {props.text}
     </label>
   );

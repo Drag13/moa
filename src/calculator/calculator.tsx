@@ -16,24 +16,25 @@ export const MoaCalculator = () => {
 
   return (
     <>
+      <h1 className="text-3xl mb-4 text-white">MOA calculator</h1>
       <FormGroup>
-        <AppLabel htmlFor="spread" text="Spread(mm)" />
         <AppInput
           id="spread"
           onChange={handleSpreadChange}
           value={spread}
-          placeholder="Spread in mm"
+          required
         />
+        <AppLabel htmlFor="spread" text="Spread(mm)" />
       </FormGroup>
 
       <FormGroup>
-        <AppLabel htmlFor="distance" text="Distance" />
         <AppInput
           id="distance"
           onChange={handleDistanceChange}
           value={distance}
-          placeholder="Distance in m"
+          required
         />
+        <AppLabel htmlFor="distance" text="Distance" />
       </FormGroup>
 
       <MoaResult moa={moa} />
