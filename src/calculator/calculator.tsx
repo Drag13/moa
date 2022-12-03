@@ -1,8 +1,9 @@
 import { ChangeEvent } from "react";
+import { Layout } from "../Layout";
 import { FormGroup } from "../shared/form-group/form-group";
 import { AppInput } from "../shared/input/input";
 import { AppLabel } from "../shared/label/label";
-import { MoaResult } from "./result";
+import { MoaResult } from "./Result";
 import { useMoaCalculator } from "./useMoaCalculator";
 
 export const MoaCalculator = () => {
@@ -15,7 +16,7 @@ export const MoaCalculator = () => {
     setDistance(e.target.value);
 
   return (
-    <>
+    <Layout>
       <h1 className="text-3xl mb-4 text-white">MOA calculator</h1>
       <FormGroup>
         <AppInput
@@ -38,6 +39,6 @@ export const MoaCalculator = () => {
       </FormGroup>
 
       <MoaResult moa={moa} />
-    </>
+    </Layout>
   );
 };
