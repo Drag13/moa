@@ -1,4 +1,4 @@
 export enum AppRoutes {
-  Landing = "/",
-  Calculator = "/mm-to-moa",
+  Logs = "/logs",
+  Calculator = "/",
 }

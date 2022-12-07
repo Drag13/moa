@@ -1,10 +1,12 @@
-import { PropsWithChildren } from "react";
+import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer";
 
-export const Layout = ({ children }: PropsWithChildren) => {
+export const Layout = () => {
   return (
     <div className="bg-current h-screen ">
-      <main className="container mx-auto pt-10">{children}</main>
+      <main className="container mx-auto pt-10">
+        <Outlet></Outlet>
+      </main>
       <Footer />
     </div>
   );

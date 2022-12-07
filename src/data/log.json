@@ -1,0 +1,54 @@
+[
+  {
+    "date": "03/12/22",
+    "groups": [
+      {
+        "distance": 50,
+        "ammo": "SK_SP",
+        "result": 50,
+        "suppressor": false
+      },
+      {
+        "distance": 50,
+        "ammo": "F_CS",
+        "result": 34,
+        "suppressor": false
+      },
+      {
+        "distance": 50,
+        "ammo": "FA_AES",
+        "suppressor": false,
+        "result": 38
+      }
+    ]
+  },
+  {
+    "date": "04/12/22",
+    "groups": [
+      {
+        "distance": 100,
+        "ammo": "SK_SP",
+        "result": 160,
+        "suppressor": false
+      },
+      {
+        "distance": 100,
+        "suppressor": false,
+        "ammo": "F_CS",
+        "result": 65
+      },
+      {
+        "distance": 100,
+        "ammo": "FA_AE",
+        "result": 60,
+        "suppressor": false
+      },
+      {
+        "distance": 100,
+        "ammo": "FA_AE",
+        "result": 46,
+        "suppressor": false
+      }
+    ]
+  }
+]

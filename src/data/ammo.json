@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Federal Ammunition American Eagle Suppressor",
+    "weight": 45,
+    "velocity": 970,
+    "prices": [{ "price": 306, "date": "03/12/22" }],
+    "k": 0.13,
+    "id": "FA_AES"
+  },
+  {
+    "name": "SK STANDARD PLUS",
+    "weight": 40,
+    "velocity": 1070,
+    "prices": [{ "price": 357, "date": "03/12/22" }],
+    "k": 0,
+    "id": "SK_SP"
+  },
+  {
+    "name": "FEDERAL CHAMPION SOLID",
+    "prices": [{ "price": 214, "date": "03/12/22" }],
+    "velocity": 1240,
+    "weight": 40,
+    "k": 0,
+    "id": "F_CS"
+  },
+  {
+    "name": "FEDERAL AMMUNITION AMERICAN EAGLE",
+    "prices": [{ "price": 197, "date": "03/12/22" }],
+    "velocity": 1240,
+    "weight": 40,
+    "k": 0,
+    "id": "FA_AE"
+  },
+  {
+    "name": "CCI STANDARD VELOCITY TARGET",
+    "prices": [{ "price": 243, "date": "03/12/22" }],
+    "weight": 40,
+    "k": 0,
+    "velocity": 1070,
+    "id": "CCI_SVT"
+  }
+]
