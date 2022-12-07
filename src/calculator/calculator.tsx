@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { FormGroup } from "../shared/form-group/form-group";
 import { AppInput } from "../shared/input/input";
 import { AppLabel } from "../shared/label/label";
-import { MoaResult } from "./Result";
+import { MoaResult } from "./result";
 import { useMoaCalculator } from "./useMoaCalculator";
 
 export const MoaCalculator = () => {
