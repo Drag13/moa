@@ -29,7 +29,97 @@
     "velocity": 1240,
     "weight": 40,
     "k": 0,
-    "id": "FA_AE"
+    "id": "FA_AE",
+    "ballisticTable": [
+      {
+        "range": 0,
+        "drop": -1.4752,
+        "speed": 1239,
+        "energy": 136,
+        "wind drift": 0,
+        "time ms": 1
+      },
+      {
+        "range": 50,
+        "drop": 2.8748,
+        "speed": 1098,
+        "energy": 107,
+        "wind drift": 0,
+        "time ms": 130
+      },
+      {
+        "range": 100,
+        "drop": 0.0254,
+        "speed": 1003,
+        "energy": 89,
+        "wind drift": 0,
+        "time ms": 273
+      },
+      {
+        "range": 150,
+        "drop": -11.4513,
+        "speed": 935,
+        "energy": 78,
+        "wind drift": 0,
+        "time ms": 428
+      },
+      {
+        "range": 200,
+        "drop": -32.8672,
+        "speed": 880,
+        "energy": 69,
+        "wind drift": 0,
+        "time ms": 594
+      },
+      {
+        "range": 250,
+        "drop": -65.4941,
+        "speed": 834,
+        "energy": 62,
+        "wind drift": 0,
+        "time ms": 769
+      },
+      {
+        "range": 300,
+        "drop": -110.6183,
+        "speed": 793,
+        "energy": 56,
+        "wind drift": 0,
+        "time ms": 953
+      },
+      {
+        "range": 350,
+        "drop": -169.5731,
+        "speed": 755,
+        "energy": 51,
+        "wind drift": 0,
+        "time ms": 1147
+      },
+      {
+        "range": 400,
+        "drop": -243.7636,
+        "speed": 720,
+        "energy": 46,
+        "wind drift": 0,
+        "time ms": 1351
+      },
+      {
+        "range": 450,
+        "drop": -335.0205,
+        "speed": 688,
+        "energy": 42,
+        "wind drift": 0,
+        "time ms": 1565
+      },
+      {
+        "range": 500,
+        "drop": -444.3499,
+        "speed": 657,
+        "energy": 38,
+        "wind drift": 0,
+        "time ms": 1788
+      }
+    ]
   },
   {
     "name": "CCI STANDARD VELOCITY TARGET",

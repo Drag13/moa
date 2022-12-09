@@ -3,7 +3,7 @@ import { FormGroup } from "../shared/form-group/form-group";
 import { AppInput } from "../shared/input/input";
 import { AppLabel } from "../shared/label/label";
 import { MoaResult } from "./result";
-import { useMoaCalculator } from "./useMoaCalculator";
+import { useMoaCalculator } from "./use-moa-calculator";
 
 export const MoaCalculator = () => {
   const { distance, setDistance, setSpread, spread, moa } = useMoaCalculator();

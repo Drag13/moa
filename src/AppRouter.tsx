@@ -1,16 +1,13 @@
 import { createHashRouter } from "react-router-dom";
-import { mmToMoaRoute } from "./calculator/mm-to-moa.route";
-import { LandingRoute } from "./landing/Landing.route";
+import { ammoPageRoute } from "./ammo-page/ammo-page.route";
+import { mmToMoaRoute } from "./calculator-page/mm-to-moa.route";
 import { Layout } from "./Layout";
+import { resultsPageRoute } from "./results-page/result-page.route";
 
 export const AppRouter = createHashRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [
-      LandingRoute,
-      mmToMoaRoute,
-      { path: "/ammo/:id", element: <>ammo</> },
-    ],
+    children: [resultsPageRoute, mmToMoaRoute, ammoPageRoute],
   },
 ]);

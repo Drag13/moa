@@ -1,17 +1,15 @@
-import { calculateScoreMetric } from "../calculator/calculate";
+import practiceResults from "../data/log.json";
+import { calculateScoreMetric } from "../shared/math";
+
+export const practiceResultsLoader = () => {
+  return Promise.resolve(mapPracticesDto(practiceResults));
+};
 
 type PracticeResult = {
   distance: number;
   score: number;
   date: Date;
   ammoId: string;
-};
-
-type Ammo = {
-  id: string;
-  name: string;
-  velocity: number;
-  price: number;
 };
 
 export const mapPracticesDto = (practices: unknown): PracticeResult[] => {
@@ -29,17 +27,4 @@ export const mapPracticesDto = (practices: unknown): PracticeResult[] => {
       }))
     )
     .flat();
-};
-
-export const mapAmmosDto = (ammos: unknown): Ammo[] => {
-  if (!Array.isArray(ammos)) {
-    return [];
-  }
-
-  return ammos.map((ammo) => ({
-    id: ammo.id,
-    name: ammo.name,
-    velocity: ammo.velocity,
-    price: ammo.prices.at(-1),
-  }));
 };
