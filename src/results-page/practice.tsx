@@ -14,9 +14,9 @@ export const PracticeResult = ({
   ammo,
 }: PracticeResultProps) => (
   <p className="">
-    <span>{date.toDateString()}:</span>
-    <span>{distance}m</span>
-    <span>{result} MOA</span>
+    <span>{date.toDateString()}: </span>
+    <span>{distance}m, </span>
+    <span>{result.toFixed(2)} MOA </span>
     <span>
       with <NavLink to={`/ammo/${ammo.id}`}>{ammo.name}</NavLink>
     </span>

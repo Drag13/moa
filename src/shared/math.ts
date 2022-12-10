@@ -4,3 +4,6 @@ const K = METERS_IN_100_YARDS / MM_IN_1_INCH;
 
 export const calculateScoreMetric = (spread: number, distance: number) =>
   distance === 0 ? 0 : K * (spread / distance);
+
+export const grnToGram = (v: number) => v * 0.0648;
+export const fpsToM = (v: number) => v * 0.305;

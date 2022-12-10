@@ -6,17 +6,7 @@ export const practiceResultsLoader = () => {
   return Promise.resolve(mapPracticesDto(results));
 };
 
-type PracticeResultsDto = {
-  date: string;
-  series: {
-    distance: number;
-    ammo: string;
-    resultsMm: number[];
-    suppressor: boolean;
-    onAir: boolean;
-    position: string;
-  }[];
-}[];
+type PracticeResultsDto = typeof practiceResults;
 
 type PracticeResult = {
   distance: number;
@@ -44,5 +34,6 @@ export const mapPracticesDto = (
         }))
       )
     )
-    .flat(2);
+    .flat(2)
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
 };
