@@ -13,7 +13,7 @@ export const PracticeResult = ({
   date,
   ammo,
 }: PracticeResultProps) => (
-  <p className="flex text-white">
+  <p className="">
     <span>{date.toDateString()}:</span>
     <span>{distance}m</span>
     <span>{result} MOA</span>

@@ -5,12 +5,5 @@ type AppInputProps = JSX.IntrinsicAttributes &
   InputHTMLAttributes<HTMLInputElement>;
 
 export const AppInput = (props: AppInputProps) => {
-  return (
-    <input
-      {...props}
-      className={`pt-6 w-full pb-2 border-b-2 text-white border-white bg-transparent outline-none peer focus:border-yellow-500 ${
-        props.className ?? ""
-      }`}
-    />
-  );
+  return <input {...props} className={props.className ?? ""} />;
 };

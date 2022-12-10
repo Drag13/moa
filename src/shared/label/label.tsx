@@ -6,12 +6,7 @@ type AppLabelProps = { text: string } & JSX.IntrinsicAttributes &
 
 export const AppLabel = (props: AppLabelProps) => {
   return (
-    <label
-      {...props}
-      className={`text-xl text-white absolute top-6 left-0 peer-focus:text-xs peer-focus:top-0 peer-valid:text-xs peer-valid:top-0 ${
-        props.className ?? ""
-      }`}
-    >
+    <label {...props} className={props.className ?? ""}>
       {props.text}
     </label>
   );
