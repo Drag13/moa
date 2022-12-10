@@ -1,11 +1,11 @@
 [
   {
-    "date": "03/12/22",
-    "groups": [
+    "date": "2022/12/03",
+    "series": [
       {
         "distance": 50,
         "ammo": "SK_SP",
-        "result": 50,
+        "resultsMm": [50],
         "suppressor": false,
         "onAir": false,
         "position": "sit_upor"
@@ -13,7 +13,7 @@
       {
         "distance": 50,
         "ammo": "F_CS",
-        "result": 34,
+        "resultsMm": [34],
         "suppressor": false,
         "onAir": false,
         "position": "sit_upor"
@@ -22,19 +22,19 @@
         "distance": 50,
         "ammo": "FA_AES",
         "suppressor": false,
-        "result": 38,
+        "resultsMm": [38],
         "onAir": false,
         "position": "sit_upor"
       }
     ]
   },
   {
-    "date": "04/12/22",
-    "groups": [
+    "date": "2022/12/04",
+    "series": [
       {
         "distance": 100,
         "ammo": "SK_SP",
-        "result": 160,
+        "resultsMm": [160],
         "suppressor": false,
         "onAir": true,
         "position": "sit_upor"
@@ -43,22 +43,14 @@
         "distance": 100,
         "suppressor": false,
         "ammo": "F_CS",
-        "result": 65,
+        "resultsMm": [65],
         "onAir": true,
         "position": "sit_upor"
       },
       {
         "distance": 100,
         "ammo": "FA_AE",
-        "result": 60,
-        "suppressor": false,
-        "onAir": true,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 100,
-        "ammo": "FA_AE",
-        "result": 46,
+        "resultsMm": [60, 46],
         "suppressor": false,
         "onAir": true,
         "position": "sit_upor"
@@ -66,53 +58,13 @@
     ]
   },
   {
-    "date": "10/12/22",
-    "groups": [
+    "date": "2022/12/10",
+    "series": [
       {
         "distance": 50,
         "ammo": "F_CS",
         "suppressor": false,
-        "result": 15,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 50,
-        "ammo": "F_CS",
-        "suppressor": false,
-        "result": 16,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 50,
-        "ammo": "F_CS",
-        "suppressor": false,
-        "result": 29,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 50,
-        "ammo": "F_CS",
-        "suppressor": false,
-        "result": 18,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 50,
-        "ammo": "F_CS",
-        "suppressor": false,
-        "result": 31,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-      {
-        "distance": 50,
-        "ammo": "F_CS",
-        "suppressor": false,
-        "result": 31,
+        "resultsMm": [15, 16, 29, 18, 31, 35],
         "onAir": false,
         "position": "sit_upor"
       },
@@ -120,24 +72,15 @@
         "distance": 50,
         "ammo": "SK_SP",
         "suppressor": true,
-        "result": 29,
+        "resultsMm": [29, 49],
         "onAir": false,
         "position": "sit_upor"
       },
-      {
-        "distance": 50,
-        "ammo": "SK_SP",
-        "suppressor": true,
-        "result": 49,
-        "onAir": false,
-        "position": "sit_upor"
-      },
-
       {
         "distance": 50,
         "ammo": "SK_SP",
         "suppressor": false,
-        "result": 37,
+        "resultsMm": [37],
         "onAir": false,
         "position": "sit_upor"
       }
