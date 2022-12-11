@@ -20,8 +20,28 @@
     "prices": [{ "price": 214, "date": "03/12/22" }],
     "velocityFPS": 1240,
     "weightGrn": 40,
-    "k": 0,
-    "id": "F_CS"
+    "k": 0.139,
+    "id": "F_CS",
+    "ballisticTable": [
+      {
+        "range": 0,
+        "drop": 0,
+        "speed": 1240,
+        "energy": 137
+      },
+      {
+        "range": 50,
+        "drop": 0,
+        "speed": 1103,
+        "energy": 108
+      },
+      {
+        "range": 100,
+        "drop": 5.6,
+        "speed": 1011,
+        "energy": 91
+      }
+    ]
   },
   {
     "name": "FEDERAL AMMUNITION AMERICAN EAGLE",
@@ -44,7 +64,6 @@
         "drop": 2.8748,
         "speed": 1098,
         "energy": 107,
-        "wind drift": 0,
         "time ms": 130
       },
       {
@@ -52,7 +71,6 @@
         "drop": 0.0254,
         "speed": 1003,
         "energy": 89,
-        "wind drift": 0,
         "time ms": 273
       },
       {
@@ -60,7 +78,6 @@
         "drop": -11.4513,
         "speed": 935,
         "energy": 78,
-        "wind drift": 0,
         "time ms": 428
       },
       {
@@ -68,7 +85,6 @@
         "drop": -32.8672,
         "speed": 880,
         "energy": 69,
-        "wind drift": 0,
         "time ms": 594
       },
       {
@@ -76,7 +92,6 @@
         "drop": -65.4941,
         "speed": 834,
         "energy": 62,
-        "wind drift": 0,
         "time ms": 769
       },
       {
@@ -84,7 +99,6 @@
         "drop": -110.6183,
         "speed": 793,
         "energy": 56,
-        "wind drift": 0,
         "time ms": 953
       },
       {
@@ -92,7 +106,6 @@
         "drop": -169.5731,
         "speed": 755,
         "energy": 51,
-        "wind drift": 0,
         "time ms": 1147
       },
       {
@@ -100,7 +113,6 @@
         "drop": -243.7636,
         "speed": 720,
         "energy": 46,
-        "wind drift": 0,
         "time ms": 1351
       },
       {
@@ -108,7 +120,6 @@
         "drop": -335.0205,
         "speed": 688,
         "energy": 42,
-        "wind drift": 0,
         "time ms": 1565
       },
       {
@@ -116,7 +127,6 @@
         "drop": -444.3499,
         "speed": 657,
         "energy": 38,
-        "wind drift": 0,
         "time ms": 1788
       }
     ]
