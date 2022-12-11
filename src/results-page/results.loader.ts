@@ -1,5 +1,6 @@
 import practiceResults from "../data/log.json";
 import { calculateScoreMetric } from "../shared/math";
+import { PracticeResult } from "../shared/types/practice-results";
 
 export const practiceResultsLoader = () => {
   const results = practiceResults as PracticeResultsDto;
@@ -7,13 +8,6 @@ export const practiceResultsLoader = () => {
 };
 
 type PracticeResultsDto = typeof practiceResults;
-
-type PracticeResult = {
-  distance: number;
-  score: number;
-  date: Date;
-  ammoId: string;
-};
 
 export const mapPracticesDto = (
   practices: PracticeResultsDto

@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import ammos from "../data/ammo.json";
+import { practiceResultsLoader } from "../results-page/results.loader";
 import { fpsToM, grnToGram } from "../shared/math";
 import { isNullOrEmpty, matchCaseInsensitive } from "../shared/string";
 import { LoaderData } from "../shared/utility-types";
@@ -18,9 +19,7 @@ const mapAmmoDto = (ammo: AmmoDto) => {
   };
 };
 
-export const ammoPageLoader = ({ params }: { params: { code?: string } }) => {
-  const ammoNameToSearch = params.code;
-
+export const ammoLoader = (ammoNameToSearch: string | undefined) => {
   if (isNullOrEmpty(ammoNameToSearch)) {
     return Promise.reject({ code: 400, message: "Bad Request" });
   }
@@ -30,6 +29,16 @@ export const ammoPageLoader = ({ params }: { params: { code?: string } }) => {
   return ammo
     ? Promise.resolve(ammo).then(mapAmmoDto)
     : Promise.reject({ code: 404, message: "Not Found" });
+};
+
+export const ammoPageLoader = ({
+  params: { code },
+}: {
+  params: { code?: string };
+}) => {
+  return Promise.all([ammoLoader(code), practiceResultsLoader()]).then(
+    ([ammo, results]) => ({ ammo, results })
+  );
 };
 
 export type AmmoPageData = LoaderData<typeof ammoPageLoader>;
