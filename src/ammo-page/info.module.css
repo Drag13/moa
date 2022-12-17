@@ -1,0 +1,9 @@
+.info-group {
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+
+.info-item {
+  border: 1 px solid var(--text-color);
+}

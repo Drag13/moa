@@ -85,5 +85,26 @@
         "position": "sit_upor"
       }
     ]
+  },
+  {
+    "date": "2022/12/17",
+    "series": [
+      {
+        "distance": 50,
+        "ammo": "F_CS",
+        "suppressor": false,
+        "resultsMm": [33, 26, 20],
+        "onAir": false,
+        "position": "sit_upor"
+      },
+      {
+        "distance": 50,
+        "ammo": "CCI_SVT",
+        "suppressor": false,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [13, 26]
+      }
+    ]
   }
 ]

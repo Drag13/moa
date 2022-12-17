@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer";
+import styles from "./layout.module.css";
 
 export const Layout = () => {
   return (
-    <div className="bg-current h-screen ">
-      <main className="container mx-auto pt-10">
+    <>
+      <main className={styles.root}>
         <Outlet></Outlet>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };

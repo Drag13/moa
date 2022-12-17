@@ -24,17 +24,17 @@ export function AmmoStatistics({ ammoId, logs }: AmmoStatisticsProps) {
   const topByMin = tops.topByMin;
   return (
     <section>
+      <p>Top {topByAverage} by average</p>
+      <p>Top {topByMin} by min</p>
       <p>
-        Max: <Moa value={max} />
+        Average: <Moa value={average} />{" "}
       </p>
       <p>
         Min: <Moa value={min} />
       </p>
       <p>
-        Average: <Moa value={average} />{" "}
+        Max: <Moa value={max} />
       </p>
-      <p>Top {topByAverage} by average</p>
-      <p>Top {topByMin} by min</p>
     </section>
   );
 }
@@ -84,22 +84,18 @@ type StatInfo = {
 };
 
 function calculateTop(allStats: StatInfo[], current: StatInfo) {
-  const results = { topByAverage: 1, topByMin: 1 };
+  return allStats.reduce(
+    (acc, { average, min }) => {
+      if (average < current.average) {
+        acc.topByAverage += 1;
+      }
 
-  for (let i = 0; i < allStats.length; i++) {
-    const { average, min, code } = allStats[i];
-    if (code === current.code) {
-      continue;
-    }
+      if (min < current.min) {
+        acc.topByMin += 1;
+      }
 
-    if (average < current.average) {
-      results.topByAverage += 1;
-    }
-
-    if (min < current.min) {
-      results.topByMin += 1;
-    }
-  }
-
-  return results;
+      return acc;
+    },
+    { topByAverage: 1, topByMin: 1 }
+  );
 }

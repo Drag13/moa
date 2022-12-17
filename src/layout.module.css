@@ -1,0 +1,8 @@
+.root {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+/* :root {
+  height: 100%;
+} */
