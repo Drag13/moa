@@ -106,5 +106,26 @@
         "resultsMm": [13, 26]
       }
     ]
+  },
+  {
+    "date": "2022/12/18",
+    "series": [
+      {
+        "distance": 100,
+        "ammo": "FA_AE",
+        "suppressor": false,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [36, 40]
+      },
+      {
+        "distance": 100,
+        "ammo": "F_CS",
+        "suppressor": false,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [40]
+      }
+    ]
   }
 ]
