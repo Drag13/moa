@@ -2,7 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import ammos from "../data/ammo.json";
 import { practiceResultsLoader } from "../results-page/results.loader";
 import { fpsToM, grnToGram } from "../shared/math";
-import { isNullOrEmpty, matchCaseInsensitive } from "../shared/string";
+import { fetchAmmoById } from "../shared/services/fetch";
+import { isNullOrEmpty } from "../shared/string";
 import { LoaderData } from "../shared/utility-types";
 
 type AmmoDto = typeof ammos[number];
@@ -19,12 +20,12 @@ const mapAmmoDto = (ammo: AmmoDto) => {
   };
 };
 
-export const ammoLoader = (ammoNameToSearch: string | undefined) => {
+export const ammoLoader = async (ammoNameToSearch: string | undefined) => {
   if (isNullOrEmpty(ammoNameToSearch)) {
     return Promise.reject({ code: 400, message: "Bad Request" });
   }
 
-  const ammo = ammos.find((a) => matchCaseInsensitive(a.id, ammoNameToSearch));
+  const ammo = await fetchAmmoById(ammoNameToSearch);
 
   return ammo
     ? Promise.resolve(ammo).then(mapAmmoDto)

@@ -1,10 +1,8 @@
-import { RouterProvider } from "react-router-dom";
-import { AppRouter } from "./AppRouter";
-
 import "./App.css";
+import { DbContext } from "./DbContext";
 
 function App() {
-  return <RouterProvider router={AppRouter}></RouterProvider>;
+  return <DbContext></DbContext>;
 }
 
 export default App;

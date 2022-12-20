@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -13,9 +13,9 @@ if (HTMLRoot == null) {
 }
 
 ReactDOM.createRoot(HTMLRoot).render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
 
 serviceWorkerRegistration.register();
