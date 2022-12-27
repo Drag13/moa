@@ -146,5 +146,13 @@
     "k": 0.125,
     "weightGrn": 40,
     "prices": [{ "price": 525, "date": "17/12/22" }]
+  },
+  {
+    "name": "FEDERAL PREMIUM HV MATCH GOLD MEDAL",
+    "id": "FP_HVM_GM",
+    "velocityFPS": 1200,
+    "k": 0,
+    "weightGrn": 40,
+    "prices": [{ "price": 378, "date": "18/12/2022" }]
   }
 ]

@@ -1,9 +1,8 @@
 import { IDBPDatabase, IDBPTransaction } from "idb";
-import { createLogsScheme, fulfillLogsData } from "./migration.new-logs.v2";
-import { createAmmoScheme, fulfillAmmoData } from "./seed";
+import { createInitialSchema } from "./initial-seed";
 
-const schemaMigrations = [createLogsScheme, createAmmoScheme];
-const dataMigrations = [fulfillAmmoData, fulfillLogsData];
+// const schemaMigrations = [createInitialSchema];
+// const dataMigrations = [fulfillInitialData];
 
 export async function migrate(
   database: IDBPDatabase<unknown>,
@@ -12,16 +11,13 @@ export async function migrate(
   _transaction: IDBPTransaction<unknown, string[], "versionchange">,
   _event: IDBVersionChangeEvent
 ) {
-  console.log("tet");
-
   // get all relevant migrations
-  const relevantMigrations = schemaMigrations.slice(oldVersion);
+  // const schemas = schemaMigrations.slice(oldVersion);
+  // const data = dataMigrations.slice(oldVersion);
+
+  await createInitialSchema(database);
 
   //wait until all schemas created
-  await Promise.all(relevantMigrations.map((m) => m(database)));
-
-  // fulfill data
-  for (const updateData of dataMigrations) {
-    await updateData(database);
-  }
+  //await Promise.all(schemas.map((m) => m(database)));
+  // await Promise.all(data.map((migrate) => migrate(database)));
 }

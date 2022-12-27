@@ -1,12 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-import ammos from "../data/ammo.json";
 import { practiceResultsLoader } from "../results-page/results.loader";
 import { fpsToM, grnToGram } from "../shared/math";
 import { fetchAmmoById } from "../shared/services/fetch";
 import { isNullOrEmpty } from "../shared/string";
 import { LoaderData } from "../shared/utility-types";
-
-type AmmoDto = typeof ammos[number];
+import { AmmoDto } from "../data/migrations/initial-seed";
 
 const mapAmmoDto = (ammo: AmmoDto) => {
   const priceData = ammo.prices.at(-1)!;

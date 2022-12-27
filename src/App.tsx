@@ -1,8 +1,13 @@
 import "./App.css";
-import { DbContext } from "./DbContext";
+import { AppRouterProvider } from "./AppRouter";
+import { IndexedDb } from "./IndexedDb";
 
 function App() {
-  return <DbContext></DbContext>;
+  return (
+    <IndexedDb loader={<>loading</>}>
+      <AppRouterProvider />
+    </IndexedDb>
+  );
 }
 
 export default App;
