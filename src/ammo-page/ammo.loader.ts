@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import { fetchAmmoById } from "../shared/services/fetch/ammo";
-import { fetchLogs } from "../shared/services/fetch/log";
+import { fetchAmmoById } from "../data/fetch/ammo";
+import { fetchLogs } from "../data/fetch/log";
 import { mapAmmoDtoToAmmo, mapLogsDtoToLogs } from "../shared/services/mapper";
 import { isNullOrEmpty } from "../shared/string";
 import { LoaderData } from "../shared/utility-types";

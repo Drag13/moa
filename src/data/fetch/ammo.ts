@@ -1,6 +1,6 @@
 import { openDB } from "idb";
-import { AppDbSchema, DB_METADATA } from "../../../data/db";
-import { AmmoDto } from "../../../data/migrations/initial-seed";
+import { AppDbSchema, DB_METADATA } from "../db";
+import { AmmoDto } from "../migrations/initial-seed";
 
 export async function fetchAmmoById<T>(
   id: string,

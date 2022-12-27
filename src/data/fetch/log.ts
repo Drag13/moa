@@ -1,6 +1,6 @@
 import { openDB } from "idb";
-import { AppDbSchema, DB_METADATA } from "../../../data/db";
-import { LogEntryDto } from "../../../data/migrations/initial-seed";
+import { AppDbSchema, DB_METADATA } from "../db";
+import { LogEntryDto } from "../migrations/initial-seed";
 
 export async function fetchLogs<T>(mapper: (dto: LogEntryDto[]) => T) {
   const db = await openDB<AppDbSchema>(DB_METADATA.name);

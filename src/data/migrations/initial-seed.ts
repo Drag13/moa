@@ -56,6 +56,7 @@ export async function createInitialSchema(db: IDBPDatabase<unknown>) {
   const ammoT = migratedDb
     .transaction("ammos", "readwrite")
     .objectStore("ammos");
+
   await Promise.all(ammos.map((a) => ammoT.add(a)));
 
   const logsT = migratedDb.transaction("logs", "readwrite").objectStore("logs");

@@ -4,7 +4,7 @@ import { IAppDbSchema_0 } from "./migrations/initial-seed";
 
 export const DB_METADATA = {
   name: "SIMPLE_MOA_DB_PRIMARY",
-  currentVersion: 2,
+  currentVersion: 1,
 } as const;
 
 export function ensureCreated() {
