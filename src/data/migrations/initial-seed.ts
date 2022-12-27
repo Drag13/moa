@@ -4,7 +4,7 @@ import logs from "../log.json";
 
 type StripArray<T> = T extends Array<infer U> ? U : never;
 export type AmmoDto = StripArray<typeof ammos>;
-export type LodEntryDto = StripArray<typeof logs>;
+export type LogEntryDto = StripArray<typeof logs>;
 
 type Ammo = {
   value: AmmoDto;
@@ -20,7 +20,7 @@ type Ammo = {
 };
 
 type Log = {
-  value: LodEntryDto;
+  value: LogEntryDto;
   key: string;
   indexes: { id: string };
 };
@@ -31,7 +31,6 @@ type SchemaV1 = {
 };
 
 export interface IAppDbSchema_0 extends DBSchema, SchemaV1 {}
-export type Tables = keyof SchemaV1;
 
 export async function createInitialSchema(db: IDBPDatabase<unknown>) {
   const migratedDb = db as IDBPDatabase<IAppDbSchema_0>;

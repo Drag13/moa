@@ -1,10 +1,10 @@
 import { RouteObject } from "react-router-dom";
 import { AppRoutes } from "../shared/path";
-import { ResultsPage } from "./result-page";
-import { resultPageLoader } from "./result.page.loader";
+import { LogsPage } from "./result-page";
+import { logsPageLoader } from "./result.page.loader";
 
-export const resultsPageRoute: RouteObject = {
+export const logsPageRoute: RouteObject = {
   path: AppRoutes.Logs(),
-  element: <ResultsPage />,
-  loader: resultPageLoader,
+  element: <LogsPage />,
+  loader: logsPageLoader,
 };

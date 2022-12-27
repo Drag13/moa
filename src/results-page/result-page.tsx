@@ -6,7 +6,7 @@ const UNKNOWN_AMMO = {
   name: "unknown",
 };
 
-export const ResultsPage = () => {
+export const LogsPage = () => {
   const { ammos, logs } = useResultPageData();
   return (
     <>

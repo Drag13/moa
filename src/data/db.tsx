@@ -1,6 +1,6 @@
 import { openDB } from "idb";
 import { migrate } from "./migrations/migrator";
-import { IAppDbSchema_0, Tables } from "./migrations/initial-seed";
+import { IAppDbSchema_0 } from "./migrations/initial-seed";
 
 export const DB_METADATA = {
   name: "SIMPLE_MOA_DB_PRIMARY",
@@ -14,8 +14,3 @@ export function ensureCreated() {
 }
 
 export type AppDbSchema = IAppDbSchema_0;
-
-export async function fetchAll(tableName: Tables) {
-  const db = await openDB(DB_METADATA.name);
-  return db.transaction(tableName).objectStore(tableName).getAll();
-}
