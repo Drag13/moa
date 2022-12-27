@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ammoPageRoute } from "./ammo-page/ammo-page.route";
 import { mmToMoaRoute } from "./calculator-page/mm-to-moa.route";
 import { Layout } from "./Layout";
+import { newLogPageRoute } from "./new-log-page/new-log-page.route";
 import { logsPageRoute } from "./results-page/result-page.route";
 
 const AppRouter = () =>
@@ -10,7 +11,7 @@ const AppRouter = () =>
     {
       path: "/",
       element: <Layout />,
-      children: [logsPageRoute, mmToMoaRoute, ammoPageRoute],
+      children: [logsPageRoute, mmToMoaRoute, ammoPageRoute, newLogPageRoute],
     },
   ]);
 

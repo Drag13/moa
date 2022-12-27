@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+import { AppRoutes } from "../shared/path";
 import { PracticeResult } from "./practice";
 import { useResultPageData } from "./result.page.loader";
 
@@ -11,6 +13,8 @@ export const LogsPage = () => {
   return (
     <>
       <h1>Results</h1>
+
+      <NavLink to={AppRoutes.NewLogPage()}>Add new entry</NavLink>
 
       <ul>
         {logs.map((r, i) => (

@@ -1,6 +1,6 @@
 import { openDB } from "idb";
-import { AppDbSchema, DB_METADATA } from "../../data/db";
-import { AmmoDto, LogEntryDto } from "../../data/migrations/initial-seed";
+import { AppDbSchema, DB_METADATA } from "../../../data/db";
+import { AmmoDto } from "../../../data/migrations/initial-seed";
 
 export async function fetchAmmoById<T>(
   id: string,
@@ -24,14 +24,4 @@ export async function fetchAllAmmos<T>(mapper: (dto: AmmoDto) => T) {
     .getAll();
 
   return ammos.map(mapper);
-}
-
-export async function fetchLogs<T>(mapper: (dto: LogEntryDto[]) => T) {
-  const db = await openDB<AppDbSchema>(DB_METADATA.name);
-  const logs = await db
-    .transaction("logs", "readonly")
-    .objectStore("logs")
-    .getAll();
-
-  return mapper(logs);
 }
