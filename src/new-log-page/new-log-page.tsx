@@ -1,3 +1,7 @@
-export function NewLogPage() {
-  return <>I am new log page</>;
+export default function NewLogPage() {
+  return (
+    <>
+      <h1>New Log Page</h1>
+    </>
+  );
 }
