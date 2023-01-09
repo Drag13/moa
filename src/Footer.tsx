@@ -6,5 +6,6 @@ export const Footer = () => (
   <footer className={styles.root}>
     <AppLink to={AppRoutes.Calculator()}>Calculator</AppLink>
     <AppLink to={AppRoutes.Logs()}>Logs</AppLink>
+    <AppLink to={AppRoutes.Progress()}>Progress</AppLink>
   </footer>
 );
