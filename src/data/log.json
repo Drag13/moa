@@ -192,5 +192,47 @@
         "resultsMm": [25, 22, 33, 36, 20]
       }
     ]
+  },
+  {
+    "date": "2022/12/30",
+    "id": "8",
+    "series": [
+      {
+        "distance": 50,
+        "ammo": "CCI_SVT",
+        "suppressor": true,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [22, 31, 28, 25, 25, 25]
+      }
+    ]
+  },
+  {
+    "date": "2023/01/03",
+    "id": "9",
+    "series": [
+      {
+        "distance": 50,
+        "ammo": "CCI_SVT",
+        "suppressor": true,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [19, 18, 28, 28, 35, 14, 17, 22]
+      }
+    ]
+  },
+  {
+    "date": "2023/01/07",
+    "id": "10",
+    "series": [
+      {
+        "distance": 50,
+        "ammo": "CCI_SVT",
+        "suppressor": false,
+        "onAir": false,
+        "position": "sit_upor",
+        "resultsMm": [33, 30, 17, 17, 15, 15, 24, 34, 23, 19, 24, 12]
+      }
+    ]
   }
 ]

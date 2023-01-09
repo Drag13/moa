@@ -19,9 +19,7 @@ export function AmmoStatistics({ ammoId, logs }: AmmoStatisticsProps) {
 
   const { average, max, min } = currentStats;
 
-  const tops = calculateTop(stats, currentStats);
-  const topByAverage = tops.topByAverage;
-  const topByMin = tops.topByMin;
+  const { topByAverage, topByMin } = calculateTop(stats, currentStats);
   return (
     <section>
       <p>Top {topByAverage} by average</p>
@@ -41,7 +39,7 @@ export function AmmoStatistics({ ammoId, logs }: AmmoStatisticsProps) {
 
 function calculateStatistics(results: PracticeResult[]): StatInfo[] {
   const stats = results.reduce((acc, v) => {
-    const entry = acc[v.ammoId] ?? {
+    const ammoStats = acc[v.ammoId] ?? {
       count: 0,
       max: Number.NEGATIVE_INFINITY,
       min: Number.POSITIVE_INFINITY,
@@ -49,17 +47,17 @@ function calculateStatistics(results: PracticeResult[]): StatInfo[] {
       code: v.ammoId,
     };
 
-    entry.count += 1;
-    entry.sum += v.score;
+    ammoStats.count += 1;
+    ammoStats.sum += v.score;
 
-    if (entry.max < v.score) {
-      entry.max = v.score;
+    if (ammoStats.max < v.score) {
+      ammoStats.max = v.score;
     }
-    if (entry.min > v.score) {
-      entry.min = v.score;
+    if (ammoStats.min > v.score) {
+      ammoStats.min = v.score;
     }
 
-    acc[v.ammoId] = entry;
+    acc[v.ammoId] = ammoStats;
 
     return acc;
   }, {} as Record<string, { min: number; max: number; sum: number; count: number; code: string }>);
@@ -83,9 +81,15 @@ type StatInfo = {
   average: number;
 };
 
+const MIN_AMOUNT_TO_INCLUDE = 3;
+
 function calculateTop(allStats: StatInfo[], current: StatInfo) {
   return allStats.reduce(
-    (acc, { average, min }) => {
+    (acc, { average, min, count }) => {
+      if (count < MIN_AMOUNT_TO_INCLUDE) {
+        return acc;
+      }
+
       if (average < current.average) {
         acc.topByAverage += 1;
       }
