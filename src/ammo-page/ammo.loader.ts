@@ -1,34 +1,18 @@
 import { useLoaderData } from "react-router-dom";
-import ammos from "../data/ammo.json";
-import { practiceResultsLoader } from "../results-page/results.loader";
-import { fpsToM, grnToGram } from "../shared/math";
-import { isNullOrEmpty, matchCaseInsensitive } from "../shared/string";
+import { fetchAmmoById } from "../data/fetch/ammo";
+import { fetchLogs } from "../data/fetch/log";
+import { mapAmmoDtoToAmmo, mapLogsDtoToLogs } from "../shared/services/mapper";
+import { isNullOrEmpty } from "../shared/string";
 import { LoaderData } from "../shared/utility-types";
 
-type AmmoDto = typeof ammos[number];
-
-const mapAmmoDto = (ammo: AmmoDto) => {
-  const priceData = ammo.prices.at(-1)!;
-  return {
-    name: ammo.name,
-    price: { value: priceData.price },
-    weight: grnToGram(ammo.weightGrn),
-    velocityFPS: ammo.velocityFPS,
-    velocityM: fpsToM(ammo.velocityFPS),
-    bk: ammo.k,
-  };
-};
-
-export const ammoLoader = (ammoNameToSearch: string | undefined) => {
+export const ammoLoader = async (ammoNameToSearch: string | undefined) => {
   if (isNullOrEmpty(ammoNameToSearch)) {
     return Promise.reject({ code: 400, message: "Bad Request" });
   }
 
-  const ammo = ammos.find((a) => matchCaseInsensitive(a.id, ammoNameToSearch));
+  const ammo = await fetchAmmoById(ammoNameToSearch, mapAmmoDtoToAmmo);
 
-  return ammo
-    ? Promise.resolve(ammo).then(mapAmmoDto)
-    : Promise.reject({ code: 404, message: "Not Found" });
+  return ammo ? ammo : Promise.reject({ code: 404, message: "Not Found" });
 };
 
 export const ammoPageLoader = ({
@@ -36,7 +20,7 @@ export const ammoPageLoader = ({
 }: {
   params: { code?: string };
 }) => {
-  return Promise.all([ammoLoader(code), practiceResultsLoader()]).then(
+  return Promise.all([ammoLoader(code), fetchLogs(mapLogsDtoToLogs)]).then(
     ([ammo, results]) => ({ ammo, results })
   );
 };

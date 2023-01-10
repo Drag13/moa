@@ -1,10 +1,13 @@
-import { RouterProvider } from "react-router-dom";
-import { AppRouter } from "./AppRouter";
-
 import "./App.css";
+import { AppRouterProvider } from "./AppRouter";
+import { IndexedDb } from "./IndexedDb";
 
 function App() {
-  return <RouterProvider router={AppRouter}></RouterProvider>;
+  return (
+    <IndexedDb loader={<>loading</>}>
+      <AppRouterProvider />
+    </IndexedDb>
+  );
 }
 
 export default App;

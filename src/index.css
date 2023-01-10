@@ -20,13 +20,13 @@ body {
 
 :root {
   --spacing: 1rem;
+  --content-width: 1012;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #000;
     --text-color: #fff;
-    --content-width: 1012;
   }
 }
 
